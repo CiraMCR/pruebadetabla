@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pozoleria y Antojitos Cacharpas</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+    <link href="css/templatemo-style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="col-md-6 col-12 tm-nav">
+            <ul class="tm-nav-ul">
+                <li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Home</a></li>
+                <li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <header class="row tm-welcome-section">
+                <h2 class="col-12 text-center tm-section-title">¡Conoce nuestro menú!</h2>
+                <p class="col-12 text-center"></p>
+
+
+            </header>
+            <div class="row tm-gallery">
+                <div id="tm-gallery-page-pizza" class="tm-gallery-page">
+                    <article class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+                        <figure>
+                            <img src="img/gallery/jueves.png" alt="Image-centro" class="img-fluid tm-gallery-img" />
+                            <figcaption>
+                                <p class="tm-gallery-price"></p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+                        <figure>
+                            <img src="img/gallery/doming1.png" alt="Image-centro" class="img-fluid tm-gallery-img" />
+                            <figcaption>
+                                <p class="tm-gallery-price"></p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+                        <figure>
+                            <img src="img/gallery/domingo2.png" alt="Image-centro" class="img-fluid tm-gallery-img" />
+                            <figcaption>
+                                <p class="tm-gallery-price"></p>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                </div>
+
+            </div>
+            <script src="js/jquery.min.js"></script>
+            <script src="js/parallax.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.tm-paging-link').click(function(e) {
+                        e.preventDefault();
+                        var page = $(this).text().toLowerCase();
+                        $('.tm-gallery-page').addClass('hidden');
+                        $('#tm-gallery-page-' + page).removeClass('hidden');
+                        $('.tm-paging-link').removeClass('active');
+                        $(this).addClass("active");
+                    });
+                });
+            </script>
+</body>
+
+</html>
